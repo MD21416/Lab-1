@@ -7,17 +7,17 @@
 
 fill_ram:
     # Store FFh into RAM locations 50H - 58H using direct addressing
-
-    mov ram+0x50, eax
-    movb $0xFF, (%eax)
-    movb $0xFF, ram+0x51
-    movb $0xFF, ram+0x52
-    movb $0xFF, ram+0x53
-    movb $0xFF, ram+0x54
-    movb $0xFF, ram+0x55
-    movb $0xFF, ram+0x56
-    movb $0xFF, ram+0x57
-    movb $0xFF, ram+0x58
+    
+    mov $0xFF, %eax
+    mov %eax, ram+0x50
+    mov %eax, ram+0x51
+    mov %eax, ram+0x52
+    mov %eax, ram+0x53
+    mov %eax, ram+0x54
+    mov %eax, ram+0x55
+    mov %eax, ram+0x56
+    mov %eax, ram+0x57
+    mov %eax, ram+0x58
 
     ret                 # Return control back to C program 
 
